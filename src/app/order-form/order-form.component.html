@@ -1,0 +1,73 @@
+<form class="host"  (ngSubmit)="onSubmit()">
+<mat-form-field appearance="fill">
+  <label for="id">ID number: </label>
+  <input name="id" matInput type="number" placeholder="enter id number" [(ngModel)]="order.id"  [formControl]="id" required>
+  <mat-error *ngIf="email.invalid">{{getRequiredErrorMessage()}}</mat-error>
+</mat-form-field>
+<!-- <div class="form-group"></div> -->
+<mat-form-field   appearance="fill">
+  <label for="firstName">first name </label>
+  <input name="firstName" matInput placeholder="enter first name" [(ngModel)]="order.name.firstName" [formControl]="firstName"  required>
+  <mat-error *ngIf="email.invalid">{{getRequiredErrorMessage()}}</mat-error>
+</mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <label for="lastName">LastName: </label>
+    <input name="lastName" matInput placeholder="enter last name" [formControl]="lastName" [(ngModel)]="order.name.lastName"  required>
+    <mat-error *ngIf="email.invalid">{{getRequiredErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <label for="email">Enter your email: </label>
+    <input name="email" matInput placeholder="pat@example.com" [formControl]="email" required [(ngModel)]="order.email" >
+    <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+  </mat-form-field>
+  
+
+  
+
+  <mat-form-field appearance="fill">
+    <label for="phone" >phone: </label>
+    <input name="phone" matInput placeholder="enter phone number"[formControl]="phone" [(ngModel)]="order.phone" >
+
+    <mat-error *ngIf="phone.invalid">{{getPhoneErrorMessage()}}</mat-error>
+    
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <label for="address">address: </label>
+    <input name="address" matInput placeholder="enter address" [(ngModel)]="order.address" >
+  </mat-form-field>
+
+
+<mat-form-field appearance="fill">
+  <label for="password">password: </label>
+  <input name="password" matInput placeholder="enter password" [(ngModel)]="order.password.pwd" [formControl]="password">
+  <mat-error *ngIf="password.invalid">Password must have 8 digit, include letters and numbers</mat-error>
+
+</mat-form-field>
+
+
+<mat-form-field appearance="fill">
+  <label for="confirmPassword">confirm password: </label>
+  <input name="confirmPassword" matInput placeholder="enter confirm password" [(ngModel)]="order.password.confirmPwd" [formControl]="confirmPassword">
+ 
+  <div class="error-msg" *ngIf="confirmPassword.value !==password.value">
+    Passwords don't match.
+</div>
+</mat-form-field>
+
+
+
+
+<mat-form-field appearance="fill">
+  <label for="gender">gender: </label>
+  <input name="gender" matInput  placeholder="enter gender" [(ngModel)]="order.gender"  >
+  
+</mat-form-field>
+
+
+<button  type="submit"  class="btn btn-success" >Submit</button>
+</form>
+<router-outlet></router-outlet>
