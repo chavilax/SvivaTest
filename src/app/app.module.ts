@@ -20,7 +20,7 @@ const routes: Routes = [
 
 
 ];
-// import { Order } from '/order.js';
+
 
 @NgModule({
   declarations: [
@@ -38,8 +38,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(routes)
-    //RouterModule
-    //.forRoot(routes)
+    
   ],
   exports:[MatFormFieldModule ,
      MatSelectModule,MatInputModule,

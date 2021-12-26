@@ -27,14 +27,7 @@ confirmPassword = new FormControl('', []);
 
 
 
-// checkConfirmPassword(){
-//   debugger
-//   if(this.password!==this.confirmPassword)
-//   return true;
-//   return false;
-// }
 
-// Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")
   getEmailErrorMessage() {
  
       if (this.email.hasError('required')) {
@@ -46,17 +39,14 @@ confirmPassword = new FormControl('', []);
     
   }
   getPhoneErrorMessage() {
-    debugger
-
-      // return this.phone.hasError('phone') ? 'Not a valid phone number' : '';
       return  'Not a valid phone number' ;
-
-   
   }
   getRequiredErrorMessage(){
     return 'must have a value!'
   }
   
+
+
   constructor(private route:Router) {
    this.order=new Order();
 
@@ -65,7 +55,7 @@ confirmPassword = new FormControl('', []);
     this.name=this.order.name.firstName;
 
   }
-  
+ 
    
   onSubmit(){
     debugger;
@@ -75,15 +65,7 @@ confirmPassword = new FormControl('', []);
  alert("u have errors")
  else
     this.route.navigate(['../entrance/'+this.order.name.firstName])
-   // this.route.navigateByUrl('/entrance');
-  // this.route.navigate(['../entrance'])
-  // this.route.navigate(['entrance'])
-  // this.route.navigate(['../../entrance'])
-   //this.route.(['/entrance',this.order.name.firstName]);
-    // this.route.navigate(['/', 'entrance']);
-  //  alert("clicked")
-   // this.activRoute.navigate(['/entrance']);
-   //this.route.navigate(['/entrance']);
+   
   }
 
   ngOnInit(): void {

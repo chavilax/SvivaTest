@@ -14,11 +14,9 @@ export class EntranceComponent implements OnInit {
   ngOnInit() {
     this.route.url
       .subscribe(params => {
-        console.log("ppppppppp",params); // { orderby: "price" }
       
        var x=params.length;
       this.name = params[x-1].path;
-        console.log(params[x-1].path); // price
       }
     );
   }
