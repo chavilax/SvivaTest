@@ -1,5 +1,10 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 .host {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+   /* float: right;
+            right: 50%; */
+  /* margin-left: 50%;
+  //margin: 1%; */
   }
